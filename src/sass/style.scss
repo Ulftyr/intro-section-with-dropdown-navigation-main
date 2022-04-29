@@ -1,0 +1,14 @@
+@use 'colors.scss' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 18px;
+	font-family: 'Epilogue', sans-serif; //500 , 700
+}

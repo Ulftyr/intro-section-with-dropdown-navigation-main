@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="dist/css/style.min.css">
     <style>
         .attribution {
+            position: fixed;
+            bottom: 0;
             font-size: 11px;
             text-align: center;
         }
@@ -23,25 +25,66 @@
 </head>
 
 <body>
+    <nav class="nav">
+        <img src="./dist/img/logo.svg" alt="logo snap" class="nav__logo">
+        <div src="./dist/img/icon-menu.svg" alt="" class="nav__burger"></div>
+        <div class="nav__box">
+            <ul class="nav__items">
+                <li class="nav__items-item menu-click1">
+                    Features
+                    <img class="arrow-features arrow" src="./dist/img/icon-arrow-down.svg" alt="">
+                    <ul class="nav__items-item--features">
+                        <li class="nav__items-item--features-item"><img src="./dist/img/icon-todo.svg" alt="">Todo List
+                        </li>
+                        <li class="nav__items-item--features-item"><img src="./dist/img/icon-calendar.svg"
+                                alt="">Calendar</li>
+                        <li class="nav__items-item--features-item"><img src="./dist/img/icon-reminders.svg"
+                                alt="">Reminders</li>
+                        <li class="nav__items-item--features-item"><img src="./dist/img/icon-planning.svg"
+                                alt="">Plannig
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav__items-item menu-click2">
+                    Company
+                    <img class="arrow-company arrow" src="./dist/img/icon-arrow-down.svg" alt="">
+                    <ul class="nav__items-item--company">
+                        <li class="nav__items-item--company-item">History</li>
+                        <li class="nav__items-item--company-item">Our Team</li>
+                        <li class="nav__items-item--company-item">Blog</li>
+                    </ul>
+                </li>
+                <li class="nav__items-item">Careers</li>
+                <li class="nav__items-item">About</li>
+            </ul>
+            <div class="nav__login">Login</div>
+            <div class="nav__register">Register</div>
+        </div>
+        <div class="nav__shadow"></div>
+    </nav>
+    <main class="main">
+        <img src="./dist/img/image-hero-mobile.png" class="heroimg"></img>
+        <img src="./dist/img/image-hero-desktop.png" class="heroimg-desktop"></img>
+        <section class="work">
+            <h1 class="work__header"><span>Make</span> remote work</h1>
+            <p class="work__text">
+                Get your team in sync, no matter your location. Streamline processes,
+                create team rituals, and watch productivity soar.
+            </p>
+            <button class="work__btn">Learn more</button>
+            <div class="footer">
+                <img class="footer__add" src="./dist/img/client-databiz.svg" alt="">
+                <img class="footer__add" src="./dist/img/client-audiophile.svg" alt="">
+                <img class="footer__add" src="./dist/img/client-meet.svg" alt="">
+                <img class="footer__add" src="./dist/img/client-maker.svg" alt="">
+            </div>
+        </section>
 
-    Features
-    Company
-    Careers
-    About
-
-    Login
-    Register
-
-    Make remote work
-
-    Get your team in sync, no matter your location. Streamline processes,
-    create team rituals, and watch productivity soar.
-
-    Learn more
+    </main>
 
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Your Name Here</a>.
+        Coded by <a href="https://github.com/Ulftyr">Marcin Ulftyr Zioła</a>.
     </div>
     <script src="dist/js/main.min.js"></script>
 </body>

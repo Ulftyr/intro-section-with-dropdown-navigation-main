@@ -1,4 +1,6 @@
 @use 'colors.scss' as *;
+@forward 'animations.scss';
+@forward 'desktop.scss';
 
 *,
 *::before,
@@ -11,4 +13,163 @@
 body {
 	font-size: 18px;
 	font-family: 'Epilogue', sans-serif; //500 , 700
+	height: 100vh;
+	width: 100vw;
 }
+
+.nav {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	padding: 1em;
+	z-index: 5;
+	background-color: $almost-white;
+	&__burger {
+		position: relative;
+		width: 2em;
+		height: 1em;
+		z-index: 20;
+		background-image: url('../img/icon-menu.svg');
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	&__shadow {
+		display: block;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 1;
+		opacity: 0;
+		transition: opacity 1s;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 70%;
+		height: 100vh;
+		padding-top: 4em;
+		background-color: $almost-white;
+		font-size: 0.9rem;
+		color: $medium-gray;
+		z-index: 5;
+		transform: translateX(100%);
+		transition: transform 1s;
+	}
+	&__items {
+		width: 100%;
+		list-style-type: none;
+		&-item {
+			padding: 1em;
+			.arrow {
+				margin-left: 1em;
+			}
+			&--features {
+				display: none;
+				list-style-type: none;
+				padding: 0 1em;
+				&-item {
+					margin-top: 1.5em;
+					opacity: 0;
+					img {
+						margin-right: 0.5em;
+					}
+				}
+				.active:nth-of-type(1) {
+					animation: opacityItem 0.2s both;
+				}
+				.active:nth-of-type(2) {
+					animation: opacityItem 0.2s 0.2s both;
+				}
+				.active:nth-of-type(3) {
+					animation: opacityItem 0.2s 0.4s both;
+				}
+				.active:nth-of-type(4) {
+					animation: opacityItem 0.2s 0.6s both;
+				}
+			}
+			&--company {
+				display: none;
+				list-style-type: none;
+				padding: 0 1em;
+				transform: translateY();
+				&-item {
+					margin-top: 1.5em;
+				}
+				.active:nth-of-type(1) {
+					animation: opacityItem 0.3s both;
+				}
+				.active:nth-of-type(2) {
+					animation: opacityItem 0.3s 0.3s both;
+				}
+				.active:nth-of-type(3) {
+					animation: opacityItem 0.3s 0.6s both;
+				}
+			}
+		}
+	}
+	&__login {
+		margin-top: 2em;
+	}
+	&__register {
+		margin-top: 1em;
+		padding: 0.8em 4em;
+		border-radius: 1em;
+		border: 2px solid $medium-gray;
+	}
+}
+
+.main {
+	.heroimg {
+		margin-top: 4em;
+		width: 100%;
+	}
+	.heroimg-desktop {
+		display: none;
+	}
+	.work {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&__header {
+			margin-top: 1.4em;
+			font-size: 2.2rem;
+		}
+		&__text {
+			margin: 1em 1em;
+			font-size: 1rem;
+			text-align: center;
+			line-height: 1.5em;
+			color: $medium-gray;
+		}
+		&__btn {
+			margin-top: 1em;
+			padding: 0.8em 1.5em;
+			background-color: $almost-black;
+			border-radius: 1em;
+			border: 2px solid $almost-black;
+			font-size: 1rem;
+			font-weight: 700;
+			color: $almost-white;
+		}
+		.footer {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&__add {
+				width: 20%;
+				margin: 2em 0;
+			}
+		}
+	}
+}
+
+@import 'desktop.scss';

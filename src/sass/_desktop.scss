@@ -1,0 +1,146 @@
+@use 'colors.scss' as *;
+
+@media (min-width: 1440px) {
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	.nav {
+		padding: 2em 2.5em;
+		&__burger {
+			display: none;
+		}
+		&__shadow {
+			display: none;
+		}
+		&__box {
+			flex-direction: row;
+			width: 90%;
+			height: 99px;
+			padding: 1em;
+			transform: translateX(0) !important;
+			transition: none;
+		}
+		&__items {
+			display: flex;
+			&-item {
+				position: relative;
+				padding: 0;
+				margin-left: 1em;
+				cursor: pointer;
+				transition: 0.3s;
+				&--features {
+					position: absolute;
+					width: 150px;
+					right: 0;
+					margin-top: 1em;
+					padding: 1.5em;
+					box-shadow: 0 0 10px 1px $almost-black;
+					border-radius: 1em;
+					background-color: $almost-white;
+					cursor: pointer;
+					&-item {
+						margin-top: 0;
+						margin-bottom: 1em;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				&--company {
+					position: absolute;
+					left: 0;
+					margin-top: 1em;
+					padding: 1.5em;
+					box-shadow: 0 0 10px 1px $almost-black;
+					border-radius: 1em;
+					background-color: $almost-white;
+					cursor: pointer;
+					&-item {
+						margin-top: 0;
+						margin-bottom: 1em;
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				&:hover {
+					color: $almost-black;
+				}
+			}
+		}
+		&__login {
+			margin: 0 3em 0 0;
+			cursor: pointer;
+			transition: 0.3s;
+			&:hover {
+				color: $almost-black;
+			}
+		}
+		&__register {
+			margin: 0;
+			padding: 0.8em 1em;
+			cursor: pointer;
+			transition: 0.3s;
+			&:hover {
+				color: $almost-black;
+				border: 2px solid $almost-black;
+			}
+		}
+	}
+	.main {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: center;
+		padding-top: 120px;
+		max-width: 1200px;
+		margin: 0;
+		.heroimg {
+			display: none;
+		}
+		.heroimg-desktop {
+			display: flex;
+			width: 40%;
+		}
+		.work {
+			align-items: flex-start;
+			justify-content: space-between;
+			height: 640px;
+			&__header {
+				font-size: 5rem;
+				margin-top: 1.5em;
+				span {
+					display: block;
+					width: 100%;
+				}
+			}
+			&__text {
+				text-align: left;
+				margin: 0;
+				width: 60%;
+				font-size: 1.1rem;
+			}
+			&__btn {
+				padding: 1em 1.5em;
+				border-radius: 1em;
+				font-size: 1.2rem;
+				font-weight: 700;
+				cursor: pointer;
+				transition: 0.3s;
+				&:hover {
+					border: 2px solid $almost-black;
+					background-color: $almost-white;
+					color: $almost-black;
+				}
+			}
+			.footer {
+				&__add {
+					width: 20%;
+					margin: 0;
+				}
+			}
+		}
+	}
+}
